@@ -12,9 +12,7 @@
       --neon-gold: #ffcc00;
       --space-card: rgba(18, 12, 38, 0.92);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Exo 2', system-ui, sans-serif;
       background: radial-gradient(circle at center, #1b0c3f 0%, #060212 100%);
@@ -22,7 +20,6 @@
       min-height: 100vh;
       line-height: 1.5;
     }
-
     body::before {
       content: '';
       position: fixed;
@@ -37,12 +34,10 @@
       animation: starsDrift 55s linear infinite;
       pointer-events: none;
     }
-
     @keyframes starsDrift {
       from { transform: translateY(0); }
       to { transform: translateY(-500px); }
     }
-
     header {
       background: linear-gradient(90deg, rgba(15, 10, 35, 0.97), rgba(30, 18, 55, 0.97));
       border-bottom: 1px solid rgba(0, 243, 255, 0.35);
@@ -51,7 +46,6 @@
       z-index: 100;
       box-shadow: 0 0 30px rgba(0, 243, 255, 0.15);
     }
-
     .header-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -62,7 +56,6 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
     .logo {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.25rem;
@@ -72,14 +65,12 @@
       text-shadow: 0 0 18px rgba(0, 243, 255, 0.45);
       white-space: nowrap;
     }
-
     nav {
       display: flex;
       gap: 0.4rem;
       flex-wrap: wrap;
       justify-content: center;
     }
-
     .nav-btn {
       background: transparent;
       border: 1px solid transparent;
@@ -93,37 +84,31 @@
       transition: all 0.2s ease;
       letter-spacing: 0.3px;
     }
-
     .nav-btn:hover {
       color: #e0e6f0;
       background: rgba(30, 20, 60, 0.8);
       border-color: rgba(0, 243, 255, 0.3);
     }
-
     .nav-btn.active {
       background: rgba(0, 243, 255, 0.15);
       color: var(--neon-cyan);
       border-color: var(--neon-cyan);
       box-shadow: 0 0 16px rgba(0, 243, 255, 0.25);
     }
-
     .container {
       max-width: 860px;
       margin: 0 auto;
       padding: 2.5rem 1.5rem 4rem;
     }
-
     .section { display: none; }
     .section.active {
       display: block;
       animation: fadeIn 0.35s ease;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     .section-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.35rem;
@@ -134,13 +119,11 @@
       padding-left: 0.85rem;
       text-align: left;
     }
-
     /* Home */
     .home-hero {
       text-align: center;
       padding: 1.5rem 0 2.5rem;
     }
-
     .home-hero h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 2.4rem;
@@ -153,7 +136,6 @@
       margin-bottom: 0.9rem;
       letter-spacing: 1px;
     }
-
     .home-hero p {
       color: #94a3b8;
       font-size: 1.1rem;
@@ -161,14 +143,12 @@
       margin: 0 auto 1.8rem;
       line-height: 1.6;
     }
-
     .cta-row {
       display: flex;
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     .cta-btn {
       display: inline-block;
       font-family: 'Orbitron', sans-serif;
@@ -182,14 +162,12 @@
       transition: all 0.22s ease;
       letter-spacing: 0.5px;
     }
-
     .cta-btn.primary {
       background: linear-gradient(135deg, var(--neon-cyan), #0099aa);
       color: #060212;
       box-shadow: 0 0 22px rgba(0, 243, 255, 0.35);
     }
     .cta-btn.primary:hover { transform: scale(1.05); filter: brightness(1.12); }
-
     .cta-btn.secondary {
       background: rgba(18, 12, 38, 0.9);
       color: var(--neon-gold);
@@ -197,14 +175,12 @@
       box-shadow: 0 0 16px rgba(255, 204, 0, 0.2);
     }
     .cta-btn.secondary:hover { transform: scale(1.05); background: rgba(40, 30, 70, 0.95); }
-
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
       margin-top: 2rem;
     }
-
     .feature-card {
       background: var(--space-card);
       border: 1px solid rgba(0, 243, 255, 0.25);
@@ -225,8 +201,12 @@
       margin-bottom: 0.4rem;
     }
     .feature-card p { font-size: 0.9rem; color: #94a3b8; }
-
     /* Season Pass */
+    .pass-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
     .pass-card {
       background: #111827;
       border: 1px solid #1e293b;
@@ -234,6 +214,9 @@
       overflow: hidden;
       border-top: 4px solid #a855f7;
       text-align: left;
+    }
+    .pass-card.upcoming {
+      border-top-color: #3b82f6;
     }
     .pass-image { width: 100%; display: block; }
     .pass-content { padding: 1.75rem; }
@@ -250,6 +233,10 @@
       background: #4c1d95;
       color: #e9d5ff;
     }
+    .status.upcoming {
+      background: #1e3a5f;
+      color: #93c5fd;
+    }
     .pass-card h3 {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.4rem;
@@ -265,7 +252,6 @@
       padding-top: 1rem;
       margin-top: 0.5rem;
     }
-
     /* Game Panel */
     .game-panel {
       background: var(--space-card);
@@ -275,7 +261,6 @@
       text-align: center;
       box-shadow: 0 0 40px rgba(0, 243, 255, 0.2);
     }
-
     .game-panel h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.6rem;
@@ -283,7 +268,6 @@
       margin-bottom: 0.75rem;
       text-shadow: 0 0 16px rgba(0, 243, 255, 0.4);
     }
-
     .game-panel p {
       color: #94a3b8;
       margin-bottom: 1.75rem;
@@ -291,7 +275,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .play-btn {
       display: inline-flex;
       align-items: center;
@@ -310,13 +293,11 @@
       transition: all 0.22s ease;
       letter-spacing: 1px;
     }
-
     .play-btn:hover {
       transform: scale(1.06);
       filter: brightness(1.12);
       box-shadow: 0 0 40px rgba(255, 0, 127, 0.65);
     }
-
     /* Discord */
     .discord-panel {
       background: var(--space-card);
@@ -359,7 +340,6 @@
       background: #4752c4;
       box-shadow: 0 0 32px rgba(88, 101, 242, 0.65);
     }
-
     footer {
       text-align: center;
       padding: 2rem;
@@ -368,7 +348,6 @@
       border-top: 1px solid rgba(30, 41, 59, 0.8);
       margin-top: 2rem;
     }
-
     @media (max-width: 640px) {
       .logo { font-size: 1.05rem; }
       .home-hero h1 { font-size: 1.7rem; }
@@ -379,7 +358,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-inner">
       <div class="logo">Superwog Tower Defense</div>
@@ -391,9 +369,7 @@
       </nav>
     </div>
   </header>
-
   <div class="container">
-
     <!-- HOME -->
     <section id="home" class="section active">
       <div class="home-hero">
@@ -407,7 +383,6 @@
           <a href="#" class="cta-btn secondary" onclick="showSection('season-pass'); return false;">Season Pass</a>
         </div>
       </div>
-
       <h2 class="section-title">Features</h2>
       <div class="feature-grid">
         <div class="feature-card">
@@ -428,30 +403,48 @@
         </div>
       </div>
     </section>
-
     <!-- SEASON PASS -->
     <section id="season-pass" class="section">
-      <h2 class="section-title">Current Season Pass</h2>
-      <div class="pass-card">
-        <img
-          src="https://i.postimg.cc/9fFThPTW/New-Project-(2)-(2).png"
-          alt="Infinity Vaslem August Season"
-          class="pass-image"
-        >
-        <div class="pass-content">
-          <span class="status">Active</span>
-          <h3>Infinity Vaslem – August 2026 Season</h3>
-          <p>
-            The current season pass is live.
-            This season includes the exclusive <span class="highlight">Mike Johnson Exotic unit</span>.
-          </p>
-          <div class="pass-meta">
-            Ends on <strong>September 1st 2026</strong>
+      <h2 class="section-title">Season Passes</h2>
+      <div class="pass-list">
+        <div class="pass-card">
+          <img
+            src="https://i.postimg.cc/9fFThPTW/New-Project-(2)-(2).png"
+            alt="Infinity Vaslem August Season"
+            class="pass-image"
+          >
+          <div class="pass-content">
+            <span class="status">Active</span>
+            <h3>Infinity Vaslem – August 2026 Season</h3>
+            <p>
+              The current season pass is live.
+              This season includes the exclusive <span class="highlight">Mike Johnson Exotic unit</span>.
+            </p>
+            <div class="pass-meta">
+              Ends on <strong>September 1st 2026</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="pass-card upcoming">
+          <img
+            src="https://i.postimg.cc/2jtvqxZr/Avengers-Doomsday.png"
+            alt="Avengers: Doomsday December Season"
+            class="pass-image"
+          >
+          <div class="pass-content">
+            <span class="status upcoming">Upcoming</span>
+            <h3>Avengers: Doomsday – December 2026 Season</h3>
+            <p>
+              Coming soon. More information will be revealed closer to launch.
+            </p>
+            <div class="pass-meta">
+              Coming soon on <strong>December 1st 2026</strong>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- GAME -->
     <section id="game" class="section">
       <div class="game-panel">
@@ -464,7 +457,6 @@
         </a>
       </div>
     </section>
-
     <!-- DISCORD -->
     <section id="discord" class="section">
       <div class="discord-panel">
@@ -477,17 +469,13 @@
         </a>
       </div>
     </section>
-
   </div>
-
   <footer>
     Superwog Tower Defense
   </footer>
-
   <script>
     const buttons = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.section');
-
     function showSection(id) {
       buttons.forEach(btn => {
         btn.classList.toggle('active', btn.dataset.section === id);
@@ -497,11 +485,9 @@
       });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
     buttons.forEach(btn => {
       btn.addEventListener('click', () => showSection(btn.dataset.section));
     });
   </script>
-
 </body>
 </html>
